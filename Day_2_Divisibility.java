@@ -2,15 +2,6 @@ import java.util.*;
 
 class TestClass {
 
-    public static String divisibility(int[] arr){
-        long total = 0;
-        for(int i=0;i<arr.length;i++){
-            total = total*10 + arr[i]%10;
-        }
-        
-        if(total%10 != 0) return "No";
-        return "Yes";
-    }
     public static void main(String args[] ) throws Exception {
 
         Scanner sc = new Scanner(System.in);
@@ -21,6 +12,7 @@ class TestClass {
         for(int i=0; i<N; i++){
             data[i] = sc.nextInt();
         }
-        System.out.println(divisibility(data));
+        if(data[N-1]%10 == 0) System.out.println("Yes");
+        else System.out.println("No");
     }
 }
